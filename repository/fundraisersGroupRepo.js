@@ -1,12 +1,13 @@
 const db = require('../model/db');
-const Donation = require('../model/fundraisersGroup');
+const fundraisersGroups = require('../model/fundraisersGroup');
 
 class fundraisersGroupRepo {
     constructor(){
         db.connect();
     }
     async getAll() {
-        return await fundraisersGroup.find({});
+        console.log("arrive repository")
+        return await fundraisersGroups.find({});
     }
 }
 module.exports = new fundraisersGroupRepo();
